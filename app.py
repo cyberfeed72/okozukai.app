@@ -2,6 +2,9 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
+import japanize_matplotlib 
+import matplotlib
+matplotlib.rcParams['font.family'] = 'IPAexGothic'   # or 'Noto Sans JP'
 from datetime import datetime
 from packaging import version
 import os
