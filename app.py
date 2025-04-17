@@ -131,3 +131,6 @@ st.markdown(
     "<style>" + open("assets/style.css").read() + "</style>",
     unsafe_allow_html=True
 )
+goal = st.number_input("目標金額（円）", 0, 100000, 5000)
+total = log_df["reward"].sum()
+st.progress(min(total/goal, 1.0))
