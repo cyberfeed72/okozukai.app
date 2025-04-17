@@ -11,6 +11,9 @@ st.set_page_config(
     page_icon="💸",
     layout="centered"
 )
+goal = st.number_input("目標金額（円）", 0, 100000, 5000)
+total = log_df["reward"].sum()
+st.progress(min(total/goal, 1.0))
 
 # ---------------- ここから共通部分（初期化・讀込） ----------------
 TASK_FILE = "task_list.csv"
@@ -131,6 +134,3 @@ st.markdown(
     "<style>" + open("assets/style.css").read() + "</style>",
     unsafe_allow_html=True
 )
-goal = st.number_input("目標金額（円）", 0, 100000, 5000)
-total = log_df["reward"].sum()
-st.progress(min(total/goal, 1.0))
