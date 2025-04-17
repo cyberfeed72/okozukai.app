@@ -1,0 +1,18 @@
+/* タイトルに点線の下線 */
+h1 {
+    border-bottom: 3px dotted #ff6f91;
+    padding-bottom: 0.3rem;
+  }
+  
+  /* 角丸ボタン＋シャドウ */
+  button[kind="primary"] {
+    border-radius: 12px !important;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.12);
+  }
+  
+  /* データフレームのヘッダー色 */
+  thead tr th {
+    background-color: #ffe3ec !important;
+    color: #4e4e4e !important;
+  }
+  
